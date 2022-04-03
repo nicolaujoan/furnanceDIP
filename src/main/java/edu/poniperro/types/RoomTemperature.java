@@ -1,21 +1,22 @@
 package edu.poniperro.types;
 
 public class RoomTemperature {
-   private double temperature;
+   private static Double TEMPERATURE = null;
 
-   public RoomTemperature(double temperature) {
-       this.temperature = temperature;
+   private RoomTemperature(){}
+
+   public static Double getTemperature() {
+       if (TEMPERATURE == null) {
+           TEMPERATURE = 15.0;
+       }
+       return TEMPERATURE;
    }
 
-   public double getTemperature() {
-       return this.temperature;
+   public static void setTemperature(double temperature) {
+       TEMPERATURE = temperature;
    }
 
-   public void setTemperature(double temperature) {
-       this.temperature = temperature;
-   }
-
-   public void incrementTemperature(double increment) {
-       this.temperature += increment;
+   public static void incrementTemperature(double increment) {
+       TEMPERATURE += increment;
    }
 }

@@ -1,9 +1,10 @@
-package edu.poniperro.app;
+package edu.poniperro;
 
 import edu.poniperro.hardware.GasHeater;
 import edu.poniperro.hardware.Regulator;
 import edu.poniperro.hardware.RemoteCommandSensor;
 import edu.poniperro.interfaces.*;
+import edu.poniperro.other.Jedi;
 import edu.poniperro.types.RoomTemperature;
 
 public class App {
@@ -11,7 +12,7 @@ public class App {
         final double minTemp = 15.0;
         final double maxTemp = 21.0;
 
-        RoomTemperature temperature = new RoomTemperature(15);
+        Double temperature = RoomTemperature.getTemperature();
         Heater heater = new GasHeater();
         Thermometer thermometer = new RemoteCommandSensor();
 
@@ -20,10 +21,10 @@ public class App {
         System.out.println( "Arrancando..." );
         regulator.regulate(thermometer, heater, minTemp, maxTemp, temperature);
 
-        /*Jedi yoda = new Jedi();
+        Heater yoda = new Jedi();  // Heater no conoce el metodo speak
         System.out.println( "\nArrancando a Yoda: " );
         regulator.regulate(thermometer, yoda, minTemp, maxTemp, temperature);
-        yoda.speak();*/
+        ((Jedi) yoda).speak();
     }
     
 }
