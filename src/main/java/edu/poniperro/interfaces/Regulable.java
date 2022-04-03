@@ -1,6 +1,6 @@
 package edu.poniperro.interfaces;
 
-public interface Regulator {
+public interface Regulable {
     void regulate();
     void message();
 }

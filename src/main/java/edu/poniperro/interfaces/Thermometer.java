@@ -1,2 +1,5 @@
-package edu.poniperro.interfaces;public interface Thermometer {
+package edu.poniperro.interfaces;
+
+public interface Thermometer {
+    void read();
 }
