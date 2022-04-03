@@ -4,6 +4,7 @@ target/
 # VSCode
 .vscode/
 
+<<<<<<< HEAD
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
@@ -22,3 +23,8 @@ target/
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
+=======
+.idea/
+
+/idea
+>>>>>>> b752d078fc055f267afd9cfaafeced2312e50b5c
